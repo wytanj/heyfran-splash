@@ -126,12 +126,12 @@ body {
   }
 }
 
-/* 0 Â· cream-wordmark */
+/* 0 Ã‚Â· cream-wordmark */
 [data-variant="cream-wordmark"] {
   background: var(--cream);
 }
 
-/* 1 Â· after-hours */
+/* 1 Ã‚Â· after-hours */
 [data-variant="after-hours"] {
   background: radial-gradient(120% 80% at 50% 110%, #4a3122 0%, var(--brown) 45%, #1c1914 100%);
   color: var(--cream);
@@ -176,7 +176,7 @@ body {
   50% { opacity: 0.85; }
 }
 
-/* 2 Â· scrawl-field */
+/* 2 Ã‚Â· scrawl-field */
 [data-variant="scrawl-field"] {
   background: var(--cream);
 }
@@ -241,7 +241,7 @@ body {
   box-shadow: 0 14px 40px rgba(58, 36, 21, 0.12);
 }
 
-/* 3 Â· dollhouse-peek */
+/* 3 Ã‚Â· dollhouse-peek */
 [data-variant="dollhouse-peek"] {
   background: var(--mall);
   color: var(--cream);
@@ -281,7 +281,7 @@ body {
   color: var(--yellow-soft);
 }
 
-/* 4 Â· wisp-tease */
+/* 4 Ã‚Â· wisp-tease */
 [data-variant="wisp-tease"] {
   background: radial-gradient(70% 60% at 50% 45%, #5c4030 0%, var(--brown) 40%, #1c1914 100%);
   color: var(--cream);
@@ -367,4 +367,105 @@ body {
   [data-variant="scrawl-field"] .sq.brown { opacity: 0.16; }
   [data-variant="scrawl-field"] .scrawl { opacity: 0.55; }
   [data-variant="wisp-tease"] .mote { opacity: 0.5; }
+}
+
+/* Fortune cookie crack + copy */
+.cookie {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 10px 8px 0;
+  margin: 8px 0 0;
+  cursor: pointer;
+  color: inherit;
+  max-width: 100%;
+}
+.cookie:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+.cookie-svg {
+  display: block;
+  width: min(52vw, 160px);
+  margin: 0 auto 2px;
+  overflow: visible;
+}
+.cookie-svg .shell {
+  fill: #f2d2ae;
+  stroke: #c4a070;
+  stroke-width: 1.5;
+  transform-origin: 60px 32px;
+  transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.cookie-svg .dot {
+  fill: #c4a070;
+  opacity: 0.55;
+}
+.cookie.cracking .shell.left {
+  transform: translate(-10px, -4px) rotate(-12deg);
+}
+.cookie.cracking .shell.right {
+  transform: translate(10px, -4px) rotate(12deg);
+}
+.cookie .lede {
+  pointer-events: none;
+}
+.lede.pop {
+  animation: fortune-pop 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes fortune-pop {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.fortune-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.cookie-hint {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.85;
+}
+.copy-fortune {
+  appearance: none;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+.copy-fortune:hover {
+  opacity: 1;
+  background: rgba(255, 225, 77, 0.18);
+}
+[data-variant="after-hours"] .cookie-svg .shell {
+  fill: #c4a070;
+  stroke: #8b7355;
+}
+[data-variant="after-hours"] .cookie-hint,
+[data-variant="dollhouse-peek"] .cookie-hint,
+[data-variant="wisp-tease"] .cookie-hint {
+  color: var(--tan);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cookie.cracking .shell.left,
+  .cookie.cracking .shell.right,
+  .lede.pop {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
 }

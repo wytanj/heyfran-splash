@@ -101,7 +101,23 @@ export const FORTUNES = [
   "The Bugis night air keeps secrets well.",
   "Something lovely is already in motion.",
 ];
+export const CURSED = [
+  "Your SPF is watching.",
+  "The endcap judged you. Softly.",
+  "You almost bought the wrong beige.",
+  "A gondola knows what you did last swipe.",
+  "The tester table remembers your fingerprint.",
+  "Tonight the Barrisol hums your name wrong.",
+  "You left your glow in another aisle.",
+  "The queue is short because it is staring.",
+  "Your cart wants one more thing. It is chaotic.",
+  "The mirror practiced a raised eyebrow.",
+  "Something yellow is about to happen. To you.",
+  "The scrawl on the wall is about your playlist.",
+];
 
+/** ~2% cursed, otherwise normal. */
 export function pickFortune() {
-  return FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
+  const pool = Math.random() < 0.02 ? CURSED : FORTUNES;
+  return pool[Math.floor(Math.random() * pool.length)];
 }
