@@ -81,9 +81,15 @@ body {
 
 .lede {
   margin: 14px 0 0;
-  font-size: clamp(17px, 2.4vw, 22px);
-  font-weight: 500;
-  line-height: 1.35;
+  font-family: var(--hand);
+  font-style: italic;
+  font-size: clamp(22px, 3.2vw, 32px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  max-width: 22em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fine {
@@ -120,12 +126,12 @@ body {
   }
 }
 
-/* 0 · cream-wordmark */
+/* 0 Â· cream-wordmark */
 [data-variant="cream-wordmark"] {
   background: var(--cream);
 }
 
-/* 1 · after-hours */
+/* 1 Â· after-hours */
 [data-variant="after-hours"] {
   background: radial-gradient(120% 80% at 50% 110%, #4a3122 0%, var(--brown) 45%, #1c1914 100%);
   color: var(--cream);
@@ -170,7 +176,7 @@ body {
   50% { opacity: 0.85; }
 }
 
-/* 2 · scrawl-field */
+/* 2 Â· scrawl-field */
 [data-variant="scrawl-field"] {
   background: var(--cream);
 }
@@ -235,7 +241,7 @@ body {
   box-shadow: 0 14px 40px rgba(58, 36, 21, 0.12);
 }
 
-/* 3 · dollhouse-peek */
+/* 3 Â· dollhouse-peek */
 [data-variant="dollhouse-peek"] {
   background: var(--mall);
   color: var(--cream);
@@ -275,7 +281,7 @@ body {
   color: var(--yellow-soft);
 }
 
-/* 4 · wisp-tease */
+/* 4 Â· wisp-tease */
 [data-variant="wisp-tease"] {
   background: radial-gradient(70% 60% at 50% 45%, #5c4030 0%, var(--brown) 40%, #1c1914 100%);
   color: var(--cream);
