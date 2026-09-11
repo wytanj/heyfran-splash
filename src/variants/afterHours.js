@@ -9,10 +9,7 @@ export function mount(root) {
   root.append(el('div', 'tube'));
 
   teaser(root, {
-    tone,
-    eyebrow: 'After hours · lights low',
-    title: 'FRAN GAME',
-    lede: 'The shutters are down. Wisp is dreaming.',
-    fine: 'Coming soon. It was all a dream.',
+    tone: 'yellow',
+    eyebrow: 'after hours',
   });
 }

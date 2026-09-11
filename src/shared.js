@@ -1,4 +1,6 @@
 /** Small DOM helpers shared by every rendition. */
+import { pickFortune } from './fortunes.js';
+
 export function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -9,7 +11,7 @@ export function el(tag, className, text) {
 export function wordmark(tone = 'yellow') {
   const img = el('img', 'wordmark');
   img.src = `/wordmark-${tone}.png`;
-  img.alt = 'FRAN';
+  img.alt = 'fran';
   img.decoding = 'async';
   img.width = 2245;
   img.height = 1182;
@@ -24,13 +26,12 @@ export function footer() {
   return p;
 }
 
-/** Standard copy block: eyebrow, wordmark, title, lede, footer. */
-export function teaser(root, { tone, eyebrow, title, lede, fine }) {
+/** Standard copy block: eyebrow, wordmark, fortune-cookie lede, footer. */
+export function teaser(root, { tone, eyebrow, fine } = {}) {
   const card = el('section', 'card');
   if (eyebrow) card.append(el('p', 'eyebrow', eyebrow));
   card.append(wordmark(tone));
-  if (title) card.append(el('h1', 'title', title));
-  if (lede) card.append(el('p', 'lede', lede));
+  card.append(el('p', 'lede', pickFortune()));
   if (fine) card.append(el('p', 'fine', fine));
   card.append(footer());
   root.append(card);

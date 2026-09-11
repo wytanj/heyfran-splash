@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "heyfran.com teaser splash. One of five FRAN GAME renditions per visit.",
+  "description": "heyfran.com teaser splash. Five visual renditions, 100 fortune-cookie lines.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -39,10 +39,7 @@ export async function mount(root) {
   root.append(canvas);
   teaser(root, {
     tone: 'white',
-    eyebrow: 'A peek at the floor',
-    title: 'FRAN GAME',
-    lede: 'Bugis+ after close. Coming soon.',
-    fine: 'Everything floats back to the shelf by morning.',
+    eyebrow: 'heyfran',
   });
 
   if (!hasWebGL()) {

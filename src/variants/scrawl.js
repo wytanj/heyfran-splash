@@ -50,9 +50,6 @@ export function mount(root) {
   root.append(field);
   teaser(root, {
     tone: 'black',
-    eyebrow: 'Scrawled on the shutter',
-    title: 'FRAN GAME',
-    lede: 'Start dreaming soon.',
-    fine: 'Yoink what you can. Scoff it down. Wake up.',
+    eyebrow: 'heyfran',
   });
 }

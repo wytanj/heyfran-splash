@@ -18,9 +18,6 @@ export function mount(root) {
 
   teaser(root, {
     tone: 'white',
-    eyebrow: 'Wisp is waking up',
-    title: 'Start dreaming soon',
-    lede: 'FRAN GAME. Sixty seconds after close on the Bugis+ floor.',
-    fine: 'None of it is real. All of it is yours to yoink.',
+    eyebrow: 'heyfran',
   });
 }
